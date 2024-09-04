@@ -15,7 +15,7 @@
         },
         "SESSION": {
             "description": "Session String (pyrogram) for your telegram user account. The userbot will NOT work without a session string!!",
-            "value": ""
+            "value": "",
         },
         "MONGO_URL": {
             "description": "Mongodb endpoint URL, from mongodb.com",
