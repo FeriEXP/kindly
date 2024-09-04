@@ -1,17 +1,6 @@
 {
     "name": "Akeno UserBot",
     "description": "Pluggable telegram userbot, made in python using pyrogram.",
-    "logo": "https://telegra.ph/file/c08a0f31b5527480c7540.jpg",
-    "keywords": [
-        "pyrogram",
-        "telegram",
-        "userbot",
-        "python",
-        "akeno"
-    ],
-    "repository": "https://github.com/TeamKillerX/Akeno-Userbot",
-    "website": "https://akeno.randydev.my.id",
-    "success_url": "https://t.me/TeamKillerX",
     "stack": "container",
     "env": {
         "API_ID": {
@@ -39,10 +28,23 @@
             "required": true
         }
     },
-    "formation": {
-        "akeno": {
-            "quantity": 1,
-            "size": "eco"
-        }
+    "addons": [
+    {
+      "plan": "heroku-postgresql"
     }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    },
+    {
+      "url": "https://github.com/interconnectit/heroku-buildpack-ffmpeg"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "eco"
+    }
+  }
 }
