@@ -37,7 +37,7 @@
             "description": "ONLY, If you want to use gemini ai plugin You can get it from https://ai.google.dev",
             "value": "",
             "required": true
-        },
+        }
     },
     "formation": {
         "akeno": {
